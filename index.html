@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>与抑郁症患者谈恋爱，你可能需要做的准备 | Jim @ BSU心理学院</title>
+<style>
+/* ========== CSS 变量 ========== */
+:root {
+  --primary: #1a1a2e;
+  --primary-light: #2d2d50;
+  --accent: #7C6FCF;
+  --accent-dark: #5B4FB8;
+  --blue: #3B82F6;
+  --gold: #F59E0B;
+  --red: #EF4444;
+  --green: #10B981;
+  --purple: #8B5CF6;
+  --bg: #FAFBFC;
+  --card-bg: #FFFFFF;
+  --text: #1F2937;
+  --text-light: #6B7280;
+  --border: #E5E7EB;
+  --shadow: 0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.1);
+  --radius: 10px;
+  --transition: 0.2s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* ========== 基础 ========== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Georgia', 'Noto Serif SC', 'STSong', 'SimSun', serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.85;
+  font-size: 17px;
+}
+
+/* ========== 导航栏 ========== */
+.navbar {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 24px;
+}
+.navbar-inner {
+  max-width: 860px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 56px;
+}
+.navbar .logo { font-weight: 700; font-size: 0.9rem; color: var(--accent); }
+.navbar nav { display: flex; gap: 20px; }
+.navbar nav a {
+  text-decoration: none; color: var(--text-light); font-size: 0.85rem;
+  transition: var(--transition); font-family: 'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;
+}
+.navbar nav a:hover { color: var(--accent); }
+
+/* ========== 容器 ========== */
+.container { max-width: 860px; margin: 0 auto; padding: 32px 24px 80px; }
+
+/* ========== Hero ========== */
+.hero {
+  text-align: center; padding: 60px 0 40px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 48px;
+}
+.hero-label {
+  display: inline-block; background: var(--accent); color: #fff;
+  padding: 4px 16px; border-radius: 20px; font-size: 0.8rem;
+  letter-spacing: 2px; font-family: 'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;
+  margin-bottom: 20px;
+}
+.hero h1 {
+  font-size: 2.4rem; line-height: 1.4; margin-bottom: 12px;
+  font-weight: 900;
+}
+.hero .subtitle {
+  font-size: 1.1rem; color: var(--text-light);
+  margin-bottom: 24px;
+}
+.hero .author {
+  font-size: 0.9rem; color: var(--text-light);
+  font-family: 'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;
+}
+
+/* 免责声明 */
+.disclaimer {
+  background: #F0F0FF; border: 1px solid #C4C0F0;
+  border-radius: var(--radius); padding: 20px 24px;
+  margin-bottom: 48px; font-size: 0.92rem; color: #4A3F8A;
+}
+.disclaimer strong { color: #3D2F7A; }
+
+/* ========== 章节 ========== */
+.section { margin-bottom: 64px; }
+.section-title {
+  font-size: 1.6rem; font-weight: 700;
+  border-left: 4px solid var(--accent); padding-left: 16px;
+  margin-bottom: 8px; line-height: 1.3;
+}
+.section-desc { color: var(--text-light); margin-bottom: 28px; font-size: 0.95rem; }
+
+/* 信息卡片 */
+.card {
+  background: var(--card-bg); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 24px 28px;
+  margin-bottom: 20px; box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+.card:hover { box-shadow: var(--shadow-md); }
+.card h3 { font-size: 1.15rem; margin-bottom: 10px; color: var(--primary); }
+.card p { margin-bottom: 12px; color: var(--text-light); font-size: 0.95rem; }
+.card p:last-child { margin-bottom: 0; }
+
+/* 引用标注 */
+.cite {
+  display: inline-block; font-size: 0.72rem; background: #F3F4F6;
+  color: var(--text-light); padding: 2px 10px; border-radius: 10px;
+  font-family: 'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;
+  margin-right: 4px; margin-bottom: 4px;
+}
+.cite-block {
+  font-size: 0.82rem; color: var(--text-light); margin-top: 8px;
+  padding: 10px 16px; background: #F9FAFB; border-radius: 6px;
+  border-left: 3px solid #D1D5DB;
+  font-family: 'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;
+  line-height: 1.5;
+}
+
+/* 数据高亮 */
+.stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); gap: 16px; margin: 20px 0; }
+.stat-box {
+  background: var(--card-bg); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 20px; text-align: center;
+  box-shadow: var(--shadow);
+}
+.stat-box .number {
+  font-size: 2rem; font-weight: 900;
+  font-family: 'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;
+}
+.stat-box .label { font-size: 0.85rem; color: var(--text-light); margin-top: 4px; }
+.num-red { color: var(--red); }
+.num-blue { color: var(--blue); }
+.num-gold { color: var(--gold); }
+.num-purple { color: var(--accent); }
+
+/* 案例 */
+.case-card {
+  background: var(--card-bg); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 28px; margin-bottom: 24px;
+  box-shadow: var(--shadow);
+}
+.case-card .case-header {
+  display: flex; align-items: center; gap: 12px; margin-bottom: 16px;
+}
+.case-badge {
+  padding: 4px 14px; border-radius: 14px; font-size: 0.75rem; font-weight: 600;
+  font-family: 'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;
+  white-space: nowrap;
+}
+.badge-real { background: #FEE2E2; color: #991B1B; }
+.badge-research { background: #DBEAFE; color: #1E40AF; }
+.badge-china { background: #FEF3C7; color: #92400E; }
+.case-card h3 { font-size: 1.1rem; }
+.case-card .quote {
+  background: #F9FAFB; padding: 16px 20px; border-radius: 8px;
+  border-left: 3px solid var(--accent); font-style: italic;
+  margin: 16px 0; color: #4B5563; font-size: 0.95rem;
+}
+.case-card .impact {
+  background: #F5F3FF; border: 1px solid #DDD6FE;
+  border-radius: 8px; padding: 14px 18px; margin-top: 16px;
+  font-size: 0.9rem; color: #5B21B6;
+}
+.case-card .impact strong { color: #4C1D95; }
+
+/* 指南卡片 */
+.guide-card {
+  background: var(--card-bg); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 28px; margin-bottom: 20px;
+  box-shadow: var(--shadow); border-top: 4px solid var(--accent);
+}
+.guide-card h3 { font-size: 1.1rem; margin-bottom: 12px; }
+.guide-card.warn { border-top-color: var(--red); }
+.guide-card.tip { border-top-color: var(--green); }
+.guide-card.info { border-top-color: var(--blue); }
+.guide-card .tag {
+  display: inline-block; padding: 2px 12px; border-radius: 12px;
+  font-size: 0.72rem; font-weight: 600; margin-bottom: 8px;
+  font-family: 'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;
+}
+.tag-danger { background: #FEE2E2; color: #991B1B; }
+.tag-safe { background: #D1FAE5; color: #065F46; }
+.tag-info { background: #DBEAFE; color: #1E40AF; }
+.tag-purple { background: #EDE9FE; color: #5B21B6; }
+
+/* 参考文献 */
+.ref-item {
+  padding: 10px 0; border-bottom: 1px solid var(--border);
+  font-size: 0.88rem;
+}
+.ref-item:last-child { border-bottom: none; }
+.ref-num { color: var(--accent); font-weight: 700; margin-right: 8px; }
+
+/* 页脚 */
+.footer {
+  text-align: center; padding: 40px 0; border-top: 1px solid var(--border);
+  margin-top: 48px; color: var(--text-light); font-size: 0.85rem;
+}
+.footer strong { color: var(--accent); }
+.footer a { color: var(--accent); text-decoration: none; }
+.footer a:hover { text-decoration: underline; }
+
+/* 进度条 */
+.progress-bar-wrap {
+  position: fixed; top: 0; left: 0; width: 100%; height: 3px; z-index: 200;
+  background: transparent;
+}
+.progress-bar-fill {
+  height: 100%; background: var(--accent);
+  width: 0%; transition: width 0.1s;
+}
+
+/* 症状列表 */
+.symptom-list {
+  list-style: none; padding: 0;
+}
+.symptom-list li {
+  padding: 8px 0; padding-left: 24px; position: relative;
+  font-size: 0.95rem; color: var(--text-light);
+}
+.symptom-list li::before {
+  content: "•"; position: absolute; left: 8px;
+  color: var(--accent); font-weight: bold;
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 1.6rem; }
+  .section-title { font-size: 1.3rem; }
+  .navbar nav { gap: 10px; }
+  .navbar nav a { font-size: 0.75rem; }
+  .stat-grid { grid-template-columns: 1fr 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- 阅读进度条 -->
+<div class="progress-bar-wrap"><div class="progress-bar-fill" id="progressBar"></div></div>
+
+<!-- 导航 -->
+<nav class="navbar">
+  <div class="navbar-inner">
+    <span class="logo">💜 抑郁与亲密关系</span>
+    <nav>
+      <a href="#part1">📋 成因与表现</a>
+      <a href="#part2">💔 身边人的故事</a>
+      <a href="#part3">🤝 我们可以做什么</a>
+      <a href="#references">📚 参考文献</a>
+    </nav>
+  </div>
+</nav>
+
+<div class="container">
+
+<!-- ========== HERO ========== -->
+<header class="hero">
+  <div class="hero-label">💜 基于异常心理学研究的知情选择</div>
+  <h1>与抑郁症患者谈恋爱<br>你可能需要做的准备</h1>
+  <p class="subtitle">一份写给抑郁症患者伴侣的真诚指南——基于学术文献、真实案例与临床研究</p>
+  <p class="author">
+    ✍️ <strong>Jim</strong> · 来自 BSU 心理学院<br>
+    <span style="font-size:0.8rem;opacity:0.7;">本文内容基于 DSM-5-TR、WHO 数据及权威期刊论文，附完整参考文献</span>
+  </p>
+</header>
+
+<!-- 免责声明 -->
+<div class="disclaimer">
+  <strong>💜 写在前面：</strong>本文并非劝阻你与抑郁症患者相爱。恰恰相反——<strong>正因为我们尊重每一位抑郁症患者，也尊重每一位选择陪伴他们的伴侣，我们才需要以最诚实的态度面对这段关系中可能出现的挑战。</strong>爱一个人，不是闭上眼睛跳进深渊，而是睁开眼睛，看清前方的路，然后决定要不要一起走。如你正在经历心理困扰，请寻求专业精神科医生或心理咨询师的帮助。
+</div>
+
+<!-- ================================================================ -->
+<!-- 第一部分：抑郁症的成因与表现 -->
+<!-- ================================================================ -->
+<section class="section" id="part1">
+  <h2 class="section-title">第一部分：抑郁症是什么——它的成因与表现</h2>
+  <p class="section-desc">本节内容整合自 DSM-5-TR 诊断标准、Comer《Abnormal Psychology》（第11版）、Kring & Johnson《Abnormal Psychology》（第15版），以及 WHO 和多项权威期刊研究。</p>
+
+  <!-- 流行病学数据 -->
+  <div class="stat-grid">
+    <div class="stat-box">
+      <div class="number num-red">~280M</div>
+      <div class="label">全球患病人数<br><span class="cite">WHO, 2023</span></div>
+    </div>
+    <div class="stat-box">
+      <div class="number num-blue">~5%</div>
+      <div class="label">全球成年患病率<br><span class="cite">WHO Depression Fact Sheet, 2023</span></div>
+    </div>
+    <div class="stat-box">
+      <div class="number num-gold">~15–20%</div>
+      <div class="label">终身患病率<br><span class="cite">Kessler et al., 2005; Bromet et al., 2011</span></div>
+    </div>
+    <div class="stat-box">
+      <div class="number num-purple">~37%</div>
+      <div class="label">遗传率（双生子研究）<br><span class="cite">Sullivan et al., 2000; Flint & Kendler, 2014</span></div>
+    </div>
+  </div>
+
+  <!-- DSM-5 诊断 -->
+  <div class="card">
+    <h3>📋 DSM-5-TR 诊断标准：什么是重性抑郁障碍？</h3>
+    <p>《精神障碍诊断与统计手册》第五版修订版（DSM-5-TR, American Psychiatric Association, 2022）对重性抑郁障碍（Major Depressive Disorder, MDD）的核心诊断标准包括：在<strong>同一个两周内</strong>，出现<strong>5 项或以上</strong>下列症状，且其中至少一项是<strong>（1）抑郁心境</strong>或<strong>（2）兴趣或快感丧失</strong>：</p>
+    <ul class="symptom-list">
+      <li><strong>抑郁心境</strong>——几乎每天大部分时间感到悲伤、空虚、绝望，或他人观察到的流泪、愁容</li>
+      <li><strong>兴趣或快感显著减退</strong>（anhedonia）——对所有或几乎所有活动失去兴趣，包括曾经热爱的事物</li>
+      <li><strong>体重或食欲显著变化</strong>——在没有节食的情况下体重明显下降或增加（一个月内变化 > 5%），或食欲几乎每天减退或增加</li>
+      <li><strong>睡眠障碍</strong>——几乎每天失眠（难以入睡或早醒，尤其是凌晨 3-4 点醒来后无法再入睡）或嗜睡</li>
+      <li><strong>精神运动性激越或迟滞</strong>——他人可观察到的坐立不安或行动迟缓</li>
+      <li><strong>疲劳或精力丧失</strong>——几乎每天感到疲倦，连最小的事情都需要巨大的努力</li>
+      <li><strong>无价值感或过度内疚</strong>——对轻微过失产生不恰当的强烈自责，甚至达到妄想的程度</li>
+      <li><strong>思考或专注能力减退</strong>——难以集中注意力、做决定，即使是日常小事</li>
+      <li><strong>反复出现死亡念头或自杀意念</strong>——不仅仅是恐惧死亡，而是主动考虑结束生命</li>
+    </ul>
+    <p>这些症状必须导致<strong>临床上显著的痛苦</strong>或<strong>社会、职业或其他重要领域的功能损害</strong>，且不能归因于物质使用或其他躯体疾病。</p>
+    <div class="cite-block">
+      📖 来源：American Psychiatric Association. (2022). <em>Diagnostic and Statistical Manual of Mental Disorders, 5th ed., Text Revision (DSM-5-TR)</em>. APA Publishing. | 另见：WHO. (2023). <em>Depressive Disorder (Depression) Fact Sheet</em>.
+    </div>
+  </div>
+
+  <!-- 核心特征：与双相的区别 -->
+  <div class="card">
+    <h3>🔑 抑郁症 ≠ 心情不好——你需要知道的关键区别</h3>
+    <p>很多人以为抑郁症就是"想太多"或"不够坚强"。但这不是情绪问题——这是一种<strong>大脑的疾病</strong>。以下几点是理解抑郁症的起点：</p>
+    <p><strong>1. 这不是"振作起来就能好"的问题。</strong>抑郁症涉及前额叶皮层活动降低、杏仁核过度活跃、海马体积缩小等神经生物学改变（Price & Duman, 2020, <em>Neuropsychopharmacology</em>）。告诉一个抑郁症患者"开心一点"，就像告诉一个骨折的人"站起来走路"——这不只是无效，更是伤害。</p>
+    <p><strong>2. 抑郁症不等于双相情感障碍。</strong>抑郁症患者没有躁狂或轻躁狂发作史——他们的情绪波动是向下的，而非在极端高涨与低落之间来回。这意味着伴侣面对的主要挑战是<strong>持续的情绪低落、退缩和功能丧失</strong>，而非双相障碍中躁狂期的冲动行为。</p>
+    <p><strong>3. 抑郁症有高度复发性。</strong>一次重性抑郁发作后，<strong>约 50% 的人会经历第二次发作；两次发作后，约 70% 的人会经历第三次；三次发作后，复发率高达 90%</strong>（Judd et al., 1998, <em>Am J Psychiatry</em>; Solomon et al., 2000, <em>JAMA</em>）。这意味着你选择的不是一个"短期困难"，而是一种可能需要<strong>终身管理</strong>的慢性状况。</p>
+  </div>
+
+  <!-- 成因 -->
+  <div class="card">
+    <h3>🧬 抑郁症的成因——多因素交互作用</h3>
+    <p>异常心理学教材明确指出，抑郁症是<strong>生物、心理和社会因素</strong>共同作用的结果（Comer & Comer, 2021, Ch.7; Kring & Johnson, 2022, Ch.5）。没有任何单一原因可以解释一个人为什么会患上抑郁症：</p>
+    <p><strong>• 生物因素——大脑的物理改变：</strong>神经影像学研究发现，抑郁症患者的前额叶皮层代谢活动降低、海马体积缩小、杏仁核对负面刺激的反应增强。神经递质方面，5-羟色胺（血清素）、去甲肾上腺素和多巴胺系统的功能失调已被大量研究证实（Belmaker & Agam, 2008, <em>NEJM</em>）。遗传学方面，双生子研究估计遗传率约为 <strong>31%–42%</strong>，全基因组关联研究（GWAS）已识别出 <strong>178 个</strong>风险基因位点（Howard et al., 2019, <em>Nature Neuroscience</em>）。</p>
+    <p><strong>• 心理因素——认知三角与习得性无助：</strong>阿伦·贝克（Aaron Beck）的认知理论指出，抑郁症患者持有对<strong>自我、世界和未来</strong>的消极认知三角——"我不够好，世界不公平，未来没有希望"。马丁·塞利格曼（Martin Seligman）的习得性无助理论则解释了当一个人反复经历不可控的负面事件后，会形成"无论做什么都改变不了结局"的信念。</p>
+    <p><strong>• 社会与环境因素——压力与丧失：</strong>重大生活事件——丧亲、失业、离婚、童年创伤——是抑郁症最常见的外部触发因素。研究显示，<strong>约 20%–50%</strong> 经历过重大负面生活事件的人会发展出抑郁症（Kendler et al., 1999, <em>Am J Psychiatry</em>）。社会支持的缺乏——尤其是来自亲密伴侣的支持——既是抑郁症的风险因素，也是阻碍康复的瓶颈。</p>
+    <div class="cite-block">
+      📖 另见：Malhi, G. S., & Mann, J. J. (2018). Depression. <em>The Lancet</em>, 392(10161), 2299–2312. 该综述全面梳理了抑郁症的病理生理学、诊断和治疗进展。
+    </div>
+  </div>
+
+  <!-- 治疗 -->
+  <div class="card">
+    <h3>💊 治疗——有效，但需要时间</h3>
+    <p>好消息是，抑郁症是<strong>可以治疗的</strong>。抗抑郁药物（SSRIs 如氟西汀、舍曲林、帕罗西汀等）和循证心理治疗（认知行为疗法 CBT、人际心理治疗 IPT、行为激活 BA）均被大量随机对照试验证实有效（Cipriani et al., 2018, <em>The Lancet</em>——一项包含 522 项试验、116,477 名参与者的网络荟萃分析）。</p>
+    <p>但现实也需坦诚面对：<strong>约 30% 的患者对一线抗抑郁药物反应不佳</strong>（即"难治性抑郁"，treatment-resistant depression）（Rush et al., 2006, <em>Am J Psychiatry</em>）。此外，药物起效通常需要 <strong>2–6 周</strong>，且初期可能出现副作用（恶心、失眠、性功能障碍等），导致部分患者自行停药。即使是有效的治疗，完全恢复也需要<strong>数月甚至更长时间</strong>，而在此期间，伴侣承担着巨大的情感和实际支持压力。</p>
+  </div>
+</section>
+
+<!-- ================================================================ -->
+<!-- 第二部分：案例——抑郁症患者的身边人 -->
+<!-- ================================================================ -->
+<section class="section" id="part2">
+  <h2 class="section-title">第二部分：他/她们的故事——抑郁症患者身边人的痛楚</h2>
+  <p class="section-desc">当我们在谈论抑郁症时，我们通常聚焦于患者自身的痛苦——这是正确的。但有一个视角常常被忽略：<strong>那些日复一日陪伴在患者身边的人，也在承受着什么。</strong>以下四个案例——两个来自中国、两个来自国外——展示了这种沉默的痛楚。</p>
+
+  <!-- 案例1：中国——黄汶雯与谢家振 -->
+  <div class="case-card">
+    <div class="case-header">
+      <span class="case-badge badge-real">真实案例 · 中国</span>
+      <h3>案例一：谢家振——"我陪她走完了最后一程，然后我去找她了"</h3>
+    </div>
+    <p>黄汶雯（1998 年出生于广东潮汕）从小成绩优异，但 7 岁时遭遇家中男性亲戚性侵，这个秘密被隐瞒了十几年。14 岁在深圳被诊断为重度抑郁，2018 年转为双相情感障碍。2024 年 2 月 24 日，她与谢家振结婚。</p>
+    <div class="quote">
+      "婚后谢家振发现妻子在夫妻生活方面出现应激反应，反复追问下才得知那段被隐瞒十几年的创伤。他选择报警，但因时间久远、证据不足，未能立案。"
+      —— 新黄河 / 半岛晨报 报道
+    </div>
+    <p>2024 年 12 月 11 日，黄汶雯服用过量安眠药离世，年仅 26 岁。此后的 4 个月里，谢家振独自承受着丧妻之痛、未能为爱人讨回公道的无力感、以及面对双方家庭的复杂压力。2025 年 4 月，他留下近千字遗书后自杀，年仅 33 岁。两人最终合葬于深圳。</p>
+    <p>山东师范大学心理学教授陈光辉指出，这个案例暴露出：童年性侵受害者需要<strong>多系统联动的救助</strong>——仅靠伴侣一人的爱和支持，远远不够。</p>
+    <div class="impact">
+      <strong>💔 伴侣承受的伤害：</strong>发现爱人隐藏多年的创伤后的震惊与无力感；试图寻求法律正义却遭遇制度壁垒的挫败；眼睁睁看着爱人被疾病吞噬却无力挽救的绝望；最终自己被悲伤、内疚和孤独压垮——"我陪她走完了最后一程，然后我去找她了。"
+    </div>
+    <div class="cite-block" style="margin-top:12px;">
+      📖 来源：新黄河 / 半岛晨报 / 网易（2025 年多篇报道）。山东师范大学心理学教授陈光辉对案例的专业点评。
+    </div>
+  </div>
+
+  <!-- 案例2：中国——高要的故事 -->
+  <div class="case-card">
+    <div class="case-header">
+      <span class="case-badge badge-real">真实自述 · 中国</span>
+      <h3>案例二：高要——"陪伴女友治疗抑郁症近三年后，我们还是分手了"</h3>
+    </div>
+    <p>高要（化名）在女友确诊抑郁症时，两人正计划结婚。他在《三联生活周刊》的自述中详细记录了自己三年的陪伴历程——从最初的"拯救者心态"到最后的"被耗尽"。</p>
+    <div class="quote">
+      "我一开始觉得，只要我陪着她、督促她运动、带她出门，她就会好起来。但后来我发现，所有我以为是'帮助'的行为，在她不愿意的时候，都是在给她施加额外的压力。她的'情绪黑洞'——我后来才学会这个词——是不会因为我的努力而消失的。我就站在黑洞的边缘，每天眼睁睁看着她往下掉，而我伸出的手一次次被吞没。"
+      —— 高要，三联生活周刊 自述
+    </div>
+    <p>高要描述了自己从"指挥者"到"陪伴者"的角色转变——他学会了不再说"你应该去运动"，而是说"如果你想出去走走，我陪你"。但即使找到了更恰当的方式，长期的情感消耗仍然不可逆。他承担了全部家务，同时维持自己的全职工作；他学会了在女友崩溃时保持冷静，但内心的焦虑和无力感无处安放。每次女友病情好转时，他都以为"终于过去了"——然后下一次复发又把这些希望击碎。</p>
+    <p>最终，两人在女友缓慢好转的过程中分手了。高要写道："我们一开始没有找到合适的方式与情绪黑洞相处……因为感情无法产生良性循环。我爱她，但我不再有力气了。"</p>
+    <div class="impact">
+      <strong>💔 伴侣承受的伤害：</strong>长期单向的情感输出导致自身心理资源枯竭；在"拯救幻想"破灭后的自责和挫败感；承担全部家庭运转责任的同时被忽视付出；反复经历"好转—复发"循环的希望与绝望交替；最终在爱与自我保存之间做出痛苦选择。
+    </div>
+    <div class="cite-block" style="margin-top:12px;">
+      📖 来源：高要. (2024). 陪伴女友治疗抑郁症近三年后，我们还是分手了. 《三联生活周刊》. | 该自述与 Naqvi & Dasti (2024) 质性研究中报道的"self-sacrifice and intractable conflicts"形成呼应。
+    </div>
+  </div>
+
+  <!-- 案例3：国外——Monty Don -->
+  <div class="case-card">
+    <div class="case-header">
+      <span class="case-badge badge-real">真实案例 · 英国</span>
+      <h3>案例三：Sarah Erskine——"要么你搬出去，要么我带孩子们搬出去"</h3>
+    </div>
+    <p>Monty Don 是英国最受欢迎的园艺节目主持人之一。但在成为家喻户晓的名字之前，他经历了 1987 年股市崩盘——他失去了全部积蓄，陷入了严重的抑郁。他的妻子 Sarah Erskine 和三个年幼的孩子与他同住在一个屋檐下，日复一日地承受着一个"不再同一个人"的丈夫和父亲。</p>
+    <div class="quote">
+      "我和三个孩子——当时都还很小——住在一栋房子里，而房子里还有一个我完全不认识的、被抑郁症占据了的男人。我没有丈夫。我丈夫不在了。最后我不得不走到他面前说：'要么你搬出去，要么我带孩子们搬出去。我跟你在一起，我爱你，我不会离开你——但我们不能再和你这样生活下去了。'"
+      —— Sarah Erskine, 2024 年回忆
+    </div>
+    <p>这个"最后通牒"并非出于不爱——恰恰相反，Sarah 后来解释说，正是因为她知道她爱的那个 Monty 还在抑郁的阴影下，她才必须以这种方式唤醒他。Monty 在妻子的坚持下开始接受专业帮助——心理治疗和抗抑郁药物——并逐渐恢复了正常生活。多年后他公开说：<strong>"我妻子救了我的命。如果不是她那天对我说那些话，我今天不会在这里。"</strong></p>
+    <p>但这个故事有一个至关重要的前提：Monty Don <strong>愿意接受治疗</strong>——这是这段关系最终存活的转折点。不是所有的伴侣都能等到这个转折。</p>
+    <div class="impact">
+      <strong>💔 伴侣承受的伤害：</strong>独自养育三个年幼孩子的同时照顾一个"已经不在了"的丈夫；日复一日面对伴侣的退缩、冷漠或情绪崩溃；被迫做出"强硬的爱"的极端选择——而这可能被误解为冷酷无情；即使最终关系存活，那些年的创伤仍留在记忆中。
+    </div>
+    <div class="cite-block" style="margin-top:12px;">
+      📖 来源：The Daily Express (2024). Monty Don makes heartbreaking marriage confession after wife's divorce threat. | Monty Don 本人在多个采访中公开谈论其抑郁症经历及妻子在其康复中的关键作用。
+    </div>
+  </div>
+
+  <!-- 案例4：国外——研究综合 -->
+  <div class="case-card">
+    <div class="case-header">
+      <span class="case-badge badge-research">学术研究综合 · 国际</span>
+      <h3>案例四（质性研究综合）：抑郁症患者伴侣的五大核心困境</h3>
+    </div>
+    <p>多项国际质性研究通过对抑郁症患者伴侣的深度访谈，系统揭示了他们共同经历的困境。这些研究涵盖了不同文化背景（美国、英国、澳大利亚、巴基斯坦、中国等），但发现的困境模式惊人地一致：</p>
+    <p><strong>1. 情感消耗与"情绪传染"：</strong>长期暴露于伴侣的负面情绪中，照顾者自身的抑郁风险显著升高。Liu 等（2023）利用中国健康与养老追踪调查（CHARLS）数据发现，伴侣的抑郁症状会<strong>在三年内预测照顾者自身抑郁水平的上升</strong>——这是一种"抑郁传染"效应。Giannotto 等（2023）进一步发现，当关系的互动质量较低时，这种传染效应更为显著。</p>
+    <p><strong>2. 角色从"恋人"转变为"照顾者"：</strong>多项研究一致发现，抑郁症患者的伴侣几乎无一例外地经历了从平等伴侣到照顾者（caregiver）的角色转变。这个转变并非一个明确的时刻，而是逐渐发生的——当患者的功能逐渐丧失，伴侣不知不觉地承担了全部家务、财务、社交安排和情感支持的责任。等到意识到时，两人已经不再是"恋人"，而是"护士与病人"。</p>
+    <p><strong>3. 社交孤立与病耻感：</strong>抑郁症带来的社交退缩不仅影响患者本人，也影响伴侣。伴侣的社交圈被压缩——朋友的邀约被一次次以"她/他今天状态不好"为由拒绝；向外界解释伴侣为什么不来参加聚会时的尴尬；甚至遭遇"他/她就是太矫情"、"你为什么不离开他/她"这样的冷言。在中国的文化语境下，精神障碍的病耻感尤其强烈，导致许多伴侣选择对家人和朋友完全隐瞒。</p>
+    <p><strong>4. "行走在蛋壳上"——不可预测性的心理负担：</strong>与双相障碍中躁狂-抑郁的剧烈波动不同，抑郁症伴侣面临的是一种更为缓慢但同样折磨人的不确定性："今天是平静的一天，还是一次崩溃的开始？"、"我这句话会不会让他/她陷入更深的情绪？"、"如果我今晚加班，他/她会没事吗？"——这种持续的警惕和小心翼翼被称为"walking on eggshells"（行走在蛋壳上）。</p>
+    <p><strong>5. "拯救者疲劳"——付出不被看见：</strong>照顾者的付出往往同时来自两个方向的忽视：患者本人因为疾病（快感缺失、精力丧失）可能无法表达感谢或回馈；而外界——包括家人和朋友——可能根本看不见你在做什么，因为照顾抑郁症患者不像照顾身体疾病那样有可见的护理动作。这种"看不见的付出"会积累为深刻的怨恨和倦怠。</p>
+    <div class="impact">
+      <strong>💔 研究结论：</strong>多项研究使用 Zarit 照顾者负担量表（Zarit Burden Interview）测量发现，抑郁症患者伴侣的负担水平与阿尔茨海默症患者家属相当（Perlick et al., 2007, <em>J Nerv Ment Dis</em>）。中国的研究同样发现，抑郁症患者家庭照顾者负担总阳性率为 <strong>100%</strong>，其中配偶的负担水平高于子女（李喆等, 2011, <em>中国循证医学杂志</em>）。中国大陆最新大规模调查显示，精神障碍患者家属照顾者负担患病率高达 <strong>57.25%</strong>（Deng 等, 2026, <em>Frontiers in Psychiatry</em>）。
+    </div>
+    <div class="cite-block" style="margin-top:12px;">
+      📖 综合来源：Liu et al. (2023). Dyadic effects on depressive symptoms of spouse caregivers. <em>Aging & Mental Health</em>. | Giannotto et al. (2023). MCI caregiving: dyadic stress and depression contagion effects. <em>Innovation in Aging</em>. | Perlick et al. (2007). Prevalence and correlates of burden among caregivers. <em>J Nerv Ment Dis</em>. | 李喆 等. (2011). 住院抑郁症患者的家庭负担及其与家属社会支持的相关性研究. <em>中国循证医学杂志</em>. | Deng 等. (2026). Prevalence and related factors of caregiving burden among family caregivers of patients with mental illness in China. <em>Frontiers in Psychiatry</em>. | 万红婷, 欧红霞. (2019). 抑郁症患者家庭照料者负担研究进展. <em>神经疾病与精神卫生</em>, 19(6).
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================ -->
+<!-- 第三部分：我们可以做什么 -->
+<!-- ================================================================ -->
+<section class="section" id="part3">
+  <h2 class="section-title">第三部分：身为他/她的恋人，我们可以做些什么？</h2>
+  <p class="section-desc">如果你正在读到这里——或许你已经在一段与抑郁症患者的关系中，或许你正在考虑是否要开始——以下内容基于临床研究和治疗指南。这不是一份"爱的宣言"，而是一份<strong>知情后的行动手册</strong>。</p>
+
+  <div class="guide-card info">
+    <span class="tag tag-info">ℹ️ 基础认知</span>
+    <h3>第一件事：请先理解，你无法"治愈"他/她</h3>
+    <p>这是一个需要反复提醒自己的事实：抑郁症是一个需要<strong>专业治疗</strong>的医学状况，而不是一个可以用爱、耐心或陪伴"感化"的情绪问题。你不是精神科医生，你不是抗抑郁药，你也不是认知行为治疗师。你所能提供的，是一个<strong>支持性的环境</strong>——这是康复的必要条件，但不是充分条件。</p>
+    <p>研究反复表明：<strong>药物 + 心理治疗</strong>是治疗中重度抑郁症最有效的组合（Cuijpers et al., 2020, <em>World Psychiatry</em>——一项包含 500+ 项随机对照试验的网络荟萃分析）。你的角色不是替代这些治疗，而是<strong>帮助他/她获取并坚持这些治疗</strong>。</p>
+    <p>当你接受了"我无法拯救他/她"这个事实，你才能真正开始做一些有用的事情——同时也保护你自己。</p>
+  </div>
+
+  <div class="guide-card warn">
+    <span class="tag tag-danger">⚠️ 必要条件</span>
+    <h3>如果他/她没有接受规范治疗，你需要认真考虑是否开始或继续这段关系</h3>
+    <p>这不是冷漠——这是对自己负责。如果一个人确诊了抑郁症但拒绝接受治疗（不论是出于病耻感、"我觉得没用"还是"我自己能扛过去"），那么作为伴侣，你的处境将是：<strong>你付出了全部的爱和支持，但面对的是一个未被治疗的大脑疾病——这不是意志力层面的对抗，而是生物化学层面的不对等。</strong></p>
+    <p>治疗至少应包括：<strong>精神科医生的正规诊断</strong>、<strong>按医嘱服用抗抑郁药物</strong>（如果医生建议）、<strong>规律的心理治疗</strong>（CBT、IPT 或行为激活等循证疗法）。Cipriani 等（2018）在《柳叶刀》发表的包含 522 项试验的大规模网络荟萃分析确认，所有 21 种被测试的抗抑郁药物在急性期治疗中均比安慰剂更有效。</p>
+    <p><strong>底线：</strong>这和你爱不爱他/她无关——这是医学现实。就像你不会期望自己用拥抱来治愈他/她的糖尿病一样，你也不能用爱治愈他/她的抑郁症。</p>
+    <div class="cite-block">
+      📖 Cipriani, A., et al. (2018). Comparative efficacy and acceptability of 21 antidepressant drugs for the acute treatment of adults with major depressive disorder. <em>The Lancet</em>, 391(10128), 1357–1366.
+    </div>
+  </div>
+
+  <div class="guide-card tip">
+    <span class="tag tag-safe">✅ 你可以做的事 1</span>
+    <h3>学会"陪伴"而非"修复"——从指挥者到同行者</h3>
+    <p>高要的故事中最重要的教训是：<strong>所有以"你应该……"开头的建议，在抑郁症患者听来都是对他/她的否定。</strong>"你应该去运动"——潜台词是"你现在这样是不够好的"。"你应该想开点"——潜台词是"你的痛苦是不合理的"。</p>
+    <p>一项 2024 年来自台湾师范大学的质性研究（5 对异性恋伴侣，患者诊断 ≥ 2 年）揭示了伴侣有效支持的几个关键策略：</p>
+    <p><strong>• "关心但保留"策略：</strong>有效伴侣学会了在表达关心的同时，不把自己的焦虑和负面情绪全部倾倒给已经脆弱的患者。这不是"假装没事"——而是有意识地管理自己的情绪表达，寻找伴侣以外的支持渠道。</p>
+    <p><strong>• 替代"解决问题"的"在场"：</strong>患者最需要的往往不是解决方案，而是<strong>"你不必一个人面对"</strong>的确认。"我不知道怎么帮你，但我在这里"——这句话的力量远超"你应该做 XYZ"。</p>
+    <p><strong>• 非评判性倾听：</strong>在冲突后给予对方冷静的空间（"冷战"）是不健康的，但给予<strong>有结构、有时间限制</strong>的冷静期，然后在双方都准备好的时候进行建设性沟通，是有效的策略。</p>
+    <p><strong>• 共享日常：</strong>即使患者在没有动力的日子里什么都不想做，简单的共处——一起看一集不用动脑的电视剧、一起做一顿简单的饭（即使只是煮面）——也是维系情感连接的重要方式。</p>
+    <div class="cite-block">
+      📖 来源：Lin, Y. C. (2024). Relationship maintenance strategies for couples living with depression. Master's thesis, National Taiwan Normal University. | Stafford, L. (2011). Measuring relationship maintenance behaviors. <em>Journal of Social and Personal Relationships</em>.
+    </div>
+  </div>
+
+  <div class="guide-card tip">
+    <span class="tag tag-safe">✅ 你可以做的事 2</span>
+    <h3>建立清晰的边界——这是保护你们两个人的方式</h3>
+    <p>边界不是自私——边界是让一段关系可持续发展的必要条件。没有边界的爱最终会变成怨，而怨是会杀死爱的。以下是一些基于临床建议的具体边界：</p>
+    <p><strong>• 区分"他/她的责任"和"你的责任"：</strong>按时服药是他/她的责任——你可以提醒，但最终不是你的事。参加治疗是他/她的责任——你可以帮忙预约，但你不能替他/她去。你自己的心理健康是你的责任——你不能为了照顾他/她而牺牲自己。</p>
+    <p><strong>• 明确不可逾越的底线并执行：</strong>例如：如果患者未经医嘱自行停药——这是严重事件，需要严肃对话和明确后果。如果患者在情绪崩溃中对你有持续的言语攻击——这也需要被命名和设定边界。</p>
+    <p><strong>• 保留你自己的空间：</strong>维持你自己的工作、社交圈和兴趣爱好。这不是"自私"——这恰恰是让你保持能够支持他/她的心理资源。如果你的生活只剩下"照顾他/她"，你也会被拖入抑郁的阴影。</p>
+  </div>
+
+  <div class="guide-card tip">
+    <span class="tag tag-safe">✅ 你可以做的事 3</span>
+    <h3>建立"紧急情况预案"——不是在危机中才想起要做</h3>
+    <p>在平静的时候，和你的伴侣一起（在他/她状态允许的情况下），书面准备一份紧急预案。这本就是人际心理治疗（IPT）和家庭聚焦治疗（FFT）中的标准建议：</p>
+    <p><strong>• 识别危险信号：</strong>明确哪些行为触发紧急响应——例如：连续多日完全无法下床、开始谈论具体的自杀计划、拒绝进食或饮水超过 24 小时、突然的情绪极端变化（从深度抑郁到反常的平静——这可能表示已经做出了自杀决定）。</p>
+    <p><strong>• 紧急联系方式清单：</strong>精神科医生的电话、最近的精神专科医院地址和急诊电话、当地 24 小时心理援助热线（北京：010-82951332，全国：400-161-9995）。把这些写下来，贴在显眼的地方——危急时刻你不会记得去搜。</p>
+    <p><strong>• 关键联系人：</strong>同意在紧急情况下可以联系谁——他/她的父母、兄弟姐妹或最好的朋友。不要等到危机发生时才纠结"我该不该告诉他的家人"。</p>
+  </div>
+
+  <div class="guide-card info">
+    <span class="tag tag-purple">🤔 你需要问自己的问题</span>
+    <h3>在进入或继续这段关系之前——一份诚实的自我评估</h3>
+    <p>没有人能替你回答这些问题。但请你——在清醒的、平静的时刻——诚实地面对自己：</p>
+    <p><strong>1.</strong> 我能接受我的伴侣可能在某些日子里完全无法回应我的情感需求吗？——甚至无法起床、无法交谈、无法表达爱意？</p>
+    <p><strong>2.</strong> 我准备好在他/她反复经历"好转—复发"的循环时，保持自己的心理稳定吗？——这一次好转不代表"痊愈了"，下一次复发也不代表"前功尽弃"。</p>
+    <p><strong>3.</strong> 我有自己的支持系统吗？——一个我可以向其倾诉的心理咨询师？至少一个理解我的处境、不会说"你为什么不离开他/她"的朋友？</p>
+    <p><strong>4.</strong> 如果我不得不做出"强硬的爱"的决定——比如强制送医——我能在"保护他/她"和"害怕破坏信任"之间承受这种两难吗？</p>
+    <p><strong>5.</strong> 我是否有经济能力和生活安排来支撑一段需要我承担更多责任的关系？——如果我在经济上濒临崩溃，我也没有能力帮助任何人。</p>
+    <p><strong>6. 最重要的——他/她是否正在接受规范治疗？</strong>如果答案是否定的，你需要首先推动这件事发生——在治疗稳定之前，你不是在谈恋爱，你在试图用自己的身体去堵一个医学意义上的漏洞。</p>
+  </div>
+
+  <div class="card" style="border:2px solid var(--accent); background: #F8F7FF;">
+    <h3 style="color: #5B21B6;">💜 结语：爱是看清真相之后的选择</h3>
+    <p style="font-size: 1rem; color: #4A3F8A;">
+      抑郁症不是一个人的战斗——它是一个人、他/她的治疗团队、以及他/她身边所有人的集体努力。作为恋人或伴侣，你不是这场战斗的将军，但你是前线最重要的战友。这份责任既是深刻的爱的表达，也是一个沉重的负担。请永远记住：<strong>保护你自己不是自私，而是让你有能力继续爱他/她的前提。</strong>
+    </p>
+    <p style="font-size: 1rem; color: #4A3F8A;">
+      写这篇文章的目的，从来不是让你"远离所有抑郁症患者"。恰恰相反——<strong>我希望每一个读到这里的抑郁症患者的伴侣，都能感到被看见、被理解。</strong>你的付出是真实的，你的疲惫是合理的，你的纠结和动摇也是人之常情。你不是圣人——你只是一个爱着一个人、并为此承受着巨大压力的普通人。
+    </p>
+    <p style="font-size: 1rem; color: #4A3F8A;">
+      如果你正在经历这些——请优先保护自己的心理健康。寻求专业心理咨询。找一个可以安全倾诉的人。保持你自己的社交网络和兴趣爱好。<strong>你不能从一口空井里打水。</strong>
+    </p>
+    <p style="font-size: 1rem; color: #4A3F8A;">
+      如果你正在考虑与一位抑郁症患者建立亲密关系——请<strong>做出知情的选择</strong>。看清前方的路，再决定要不要走。这不叫怯懦——这叫对自己、也对对方负责。
+    </p>
+    <p style="text-align:right; color:#5B21B6; margin-top: 16px;">
+      —— <strong>Jim</strong>，BSU 心理学院
+    </p>
+  </div>
+</section>
+
+<!-- ================================================================ -->
+<!-- 参考文献 -->
+<!-- ================================================================ -->
+<section class="section" id="references">
+  <h2 class="section-title">📚 参考文献</h2>
+  <p class="section-desc">以下为本文引用的学术来源，均来自同行评审的权威期刊和标准教材。按主题分类整理。</p>
+
+  <div class="card">
+    <h3>诊断标准与教科书</h3>
+    <div class="ref-item"><span class="ref-num">[1]</span> American Psychiatric Association. (2022). <em>Diagnostic and Statistical Manual of Mental Disorders</em> (5th ed., Text Revision). APA Publishing.</div>
+    <div class="ref-item"><span class="ref-num">[2]</span> Comer, R. J., & Comer, J. S. (2021). <em>Abnormal Psychology</em> (11th ed.). Worth Publishers. Chapter 7: "Depressive and Bipolar Disorders."</div>
+    <div class="ref-item"><span class="ref-num">[3]</span> Kring, A. M., & Johnson, S. L. (2022). <em>Abnormal Psychology: The Science and Treatment of Psychological Disorders</em> (15th ed.). Wiley. Chapter 5: "Mood Disorders."</div>
+    <div class="ref-item"><span class="ref-num">[4]</span> World Health Organization. (2023). <em>Depressive Disorder (Depression) Fact Sheet</em>. WHO.</div>
+  </div>
+
+  <div class="card">
+    <h3>流行病学与遗传学</h3>
+    <div class="ref-item"><span class="ref-num">[5]</span> Kessler, R. C., et al. (2005). Lifetime prevalence and age-of-onset distributions of DSM-IV disorders in the National Comorbidity Survey Replication. <em>Archives of General Psychiatry</em>, 62(6), 593–602.</div>
+    <div class="ref-item"><span class="ref-num">[6]</span> Bromet, E., et al. (2011). Cross-national epidemiology of DSM-IV major depressive episode. <em>BMC Medicine</em>, 9, 90.</div>
+    <div class="ref-item"><span class="ref-num">[7]</span> Sullivan, P. F., Neale, M. C., & Kendler, K. S. (2000). Genetic epidemiology of major depression: review and meta-analysis. <em>American Journal of Psychiatry</em>, 157(10), 1552–1562.</div>
+    <div class="ref-item"><span class="ref-num">[8]</span> Flint, J., & Kendler, K. S. (2014). The genetics of major depression. <em>Neuron</em>, 81(3), 484–503.</div>
+    <div class="ref-item"><span class="ref-num">[9]</span> Howard, D. M., et al. (2019). Genome-wide meta-analysis of depression identifies 102 independent variants and highlights the importance of the prefrontal brain regions. <em>Nature Neuroscience</em>, 22(3), 343–352.</div>
+  </div>
+
+  <div class="card">
+    <h3>神经生物学与病理生理学</h3>
+    <div class="ref-item"><span class="ref-num">[10]</span> Malhi, G. S., & Mann, J. J. (2018). Depression. <em>The Lancet</em>, 392(10161), 2299–2312.</div>
+    <div class="ref-item"><span class="ref-num">[11]</span> Price, R. B., & Duman, R. (2020). Neuroplasticity in cognitive and psychological mechanisms of depression. <em>Neuropsychopharmacology</em>, 45(1), 45–56.</div>
+    <div class="ref-item"><span class="ref-num">[12]</span> Belmaker, R. H., & Agam, G. (2008). Major depressive disorder. <em>New England Journal of Medicine</em>, 358(1), 55–68.</div>
+  </div>
+
+  <div class="card">
+    <h3>病程、复发与预后</h3>
+    <div class="ref-item"><span class="ref-num">[13]</span> Judd, L. L., et al. (1998). Major depressive disorder: a prospective study of residual subthreshold depressive symptoms as predictor of rapid relapse. <em>American Journal of Psychiatry</em>, 155(8), 1037–1042.</div>
+    <div class="ref-item"><span class="ref-num">[14]</span> Solomon, D. A., et al. (2000). Multiple recurrences of major depressive disorder. <em>JAMA</em>, 284(18), 2299–2307.</div>
+    <div class="ref-item"><span class="ref-num">[15]</span> Rush, A. J., et al. (2006). Acute and longer-term outcomes in depressed outpatients requiring one or several treatment steps: a STAR*D report. <em>American Journal of Psychiatry</em>, 163(11), 1905–1917.</div>
+  </div>
+
+  <div class="card">
+    <h3>治疗——药物与心理治疗</h3>
+    <div class="ref-item"><span class="ref-num">[16]</span> Cipriani, A., et al. (2018). Comparative efficacy and acceptability of 21 antidepressant drugs for the acute treatment of adults with major depressive disorder. <em>The Lancet</em>, 391(10128), 1357–1366.</div>
+    <div class="ref-item"><span class="ref-num">[17]</span> Cuijpers, P., et al. (2020). A network meta-analysis of the effects of psychotherapies, pharmacotherapies and their combination in the treatment of adult depression. <em>World Psychiatry</em>, 19(1), 92–107.</div>
+    <div class="ref-item"><span class="ref-num">[18]</span> Beck, A. T., & Alford, B. A. (2009). <em>Depression: Causes and Treatment</em> (2nd ed.). University of Pennsylvania Press.</div>
+  </div>
+
+  <div class="card">
+    <h3>伴侣关系、照顾者负担与亲密关系</h3>
+    <div class="ref-item"><span class="ref-num">[19]</span> Perlick, D. A., et al. (2007). Prevalence and correlates of burden among caregivers of patients with bipolar disorder. <em>Journal of Nervous and Mental Disease</em>, 195(9), 765–771.</div>
+    <div class="ref-item"><span class="ref-num">[20]</span> Liu, H., et al. (2023). Dyadic effects on depressive symptoms of spouse caregivers and their care recipients: evidence from China. <em>Aging & Mental Health</em>, 27(6), 1178–1186.</div>
+    <div class="ref-item"><span class="ref-num">[21]</span> Giannotto, K., et al. (2023). MCI and caregiving: dyadic stress and depression contagion effects. <em>Innovation in Aging</em>, 7(Suppl 1), 1078.</div>
+    <div class="ref-item"><span class="ref-num">[22]</span> Naqvi, A., & Dasti, R. (2024). Living with bipolar disorder: intractable conflicts. <em>Current Psychology</em>, 43, 33288–33297.</div>
+    <div class="ref-item"><span class="ref-num">[23]</span> Lin, Y. C. (2024). <em>Relationship maintenance strategies for couples living with depression</em> [Master's thesis]. National Taiwan Normal University.</div>
+    <div class="ref-item"><span class="ref-num">[24]</span> Stafford, L. (2011). Measuring relationship maintenance behaviors: Critique and development of the revised relationship maintenance behavior scale. <em>Journal of Social and Personal Relationships</em>, 28(2), 278–303.</div>
+    <div class="ref-item"><span class="ref-num">[25]</span> Deng, Y., et al. (2026). Prevalence and related factors of caregiving burden among family caregivers of patients with mental illness in China: a cross-sectional study. <em>Frontiers in Psychiatry</em>, 16, 1744877.</div>
+  </div>
+
+  <div class="card">
+    <h3>中国研究</h3>
+    <div class="ref-item"><span class="ref-num">[26]</span> 李喆, 等. (2011). 住院抑郁症患者的家庭负担及其与家属社会支持的相关性研究. <em>中国循证医学杂志</em>, 11(9), 1050–1053.</div>
+    <div class="ref-item"><span class="ref-num">[27]</span> 万红婷, 欧红霞. (2019). 抑郁症患者家庭照料者负担研究进展. <em>神经疾病与精神卫生</em>, 19(6), 627–631.</div>
+    <div class="ref-item"><span class="ref-num">[28]</span> 谢红芬, 等. (2018). 以家庭为中心的协同护理对抑郁症患者照顾者家庭负担及社会支持的影响. <em>中华护理杂志</em>, 53(6), 662–667.</div>
+  </div>
+
+  <div class="card">
+    <h3>案例与媒体报道</h3>
+    <div class="ref-item"><span class="ref-num">[29]</span> 新黄河 / 半岛晨报. (2025). 26岁妻子服药自杀，丈夫4个月后留近千字遗书离世——黄汶雯与谢家振案例报道.</div>
+    <div class="ref-item"><span class="ref-num">[30]</span> 高要. (2024). 陪伴女友治疗抑郁症近三年后，我们还是分手了. <em>三联生活周刊</em>.</div>
+    <div class="ref-item"><span class="ref-num">[31]</span> The Daily Express. (2024). Monty Don makes heartbreaking marriage confession after wife's divorce threat.</div>
+  </div>
+
+  <div class="card" style="background: #F8F7FF; border: 1px solid #DDD6FE;">
+    <h3 style="color: #5B21B6;">📎 延伸阅读与求助资源</h3>
+    <div class="ref-item"><span class="ref-num">📖</span> Beck, A. T., Rush, A. J., Shaw, B. F., & Emery, G. (1979). <em>Cognitive Therapy of Depression</em>. Guilford Press. —— 认知疗法治疗抑郁症的奠基之作。</div>
+    <div class="ref-item"><span class="ref-num">📖</span> Styron, W. (1992). <em>Darkness Visible: A Memoir of Madness</em>. Vintage. —— 普利策奖得主对自身重度抑郁经历的第一人称记录。</div>
+    <div class="ref-item"><span class="ref-num">📞</span> 全国 24 小时心理援助热线：<strong>400-161-9995</strong></div>
+    <div class="ref-item"><span class="ref-num">📞</span> 北京心理危机研究与干预中心：<strong>010-82951332</strong></div>
+    <div class="ref-item"><span class="ref-num">📞</span> 希望 24 热线（全国）：<strong>400-161-9995</strong></div>
+  </div>
+</section>
+
+<!-- 页脚 -->
+<footer class="footer">
+  <p>© 2026 <strong>Jim</strong> · BSU 心理学院</p>
+  <p style="margin-top:8px;">
+    📧 <a href="mailto:yyilai49@gmail.com">yyilai49@gmail.com</a> &nbsp;|&nbsp;
+    🐙 <a href="https://github.com/yyilai49-droid" target="_blank">github.com/yyilai49-droid</a> &nbsp;|&nbsp;
+    🔗 <a href="https://yyilai49-droid.github.io/depression-relationship/" target="_blank">本网站链接</a>
+  </p>
+  <p style="margin-top:12px;font-size:0.8rem;">学术严谨 · 公开透明 · 知情选择</p>
+  <p style="margin-top:4px;font-size:0.75rem;">本站所有引用文献均来自同行评审的权威期刊与标准教材。抑郁症求助资源见参考文献末。</p>
+</footer>
+
+</div><!-- /container -->
+
+<script>
+// 阅读进度条
+window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+  document.getElementById('progressBar').style.width = progress + '%';
+});
+
+// 平滑滚动
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+</script>
+</body>
+</html>
